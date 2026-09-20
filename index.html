@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fresh Finish Detailing</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: white;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: #080808;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 7%;
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #1597ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #1597ff;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 120px 20px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.78),
+          rgba(0,0,0,0.92)
+        ),
+        linear-gradient(135deg, #12304a, #050505);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #1597ff;
+    }
+
+    .hero p {
+      color: #cccccc;
+      font-size: 21px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    /* BOOK BUTTON */
+
+    .book-button {
+      display: inline-block;
+      background: #1597ff;
+      color: white;
+      text-decoration: none;
+      padding: 18px 45px;
+      border-radius: 7px;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .book-button:hover {
+      background: #007bd4;
+      transform: translateY(-2px);
+    }
+
+    /* SMALL TEXT */
+
+    .availability {
+      margin-top: 18px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 7%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+    }
+
+    .title span {
+      color: #1597ff;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #101010;
+    }
+
+    .service-container {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .service {
+      background: #181818;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 35px 25px;
+      text-align: center;
+    }
+
+    .service:hover {
+      border-color: #1597ff;
+    }
+
+    .service h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #1597ff;
+      font-size: 45px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .service p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* BOOKING */
+
+    .booking {
+      background: #050505;
+    }
+
+    .booking-container {
+      max-width: 650px;
+      margin: auto;
+      background: #151515;
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid #292929;
+    }
+
+    .booking-container h3 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .booking-container > p {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      background: #0d0d0d;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 16px;
+      background: #1597ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #007bd4;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #101010;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about p {
+      color: #bbb;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #000;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 0 5%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .service-container {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .booking-container {
+        padding: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      Fresh<span>Finish</span>
+    </div>
+
+    <div>
+
+      <a href="#services">Services</a>
+
+      <a href="#booking">Book</a>
+
+      <a href="#about">About</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Professional Car Detailing
+        <span>At an Affordable Price.</span>
+      </h1>
+
+      <p>
+        Reliable interior and exterior car detailing
+        at a price that makes sense.
+      </p>
+
+      <a href="#booking" class="book-button">
+        Book a Detail
+      </a>
+
+      <div class="availability">
+        Contact me to check availability.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <h2 class="title">
+      Detailing <span>Services</span>
+    </h2>
+
+
+    <div class="service-container">
+
+
+      <div class="service">
+
+        <h3>Inside & Outside</h3>
+
+        <div class="price">$100</div>
+
+        <p>
+          A complete interior and exterior detail
+          for a full vehicle refresh.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>Interior Detail</h3>
+
+        <div class="price">$65</div>
+
+        <p>
+          A detailed interior cleaning to help
+          your vehicle feel fresh and clean.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>Exterior Detail</h3>
+
+        <div class="price">$35</div>
+
+        <p>
+          An exterior-focused detail to clean
+          and refresh the outside of your vehicle.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- BOOKING -->
+
+  <section class="booking" id="booking">
+
+    <h2 class="title">
+      Book Your <span>Detail</span>
+    </h2>
+
+
+    <div class="booking-container">
+
+      <h3>Request an Appointment</h3>
+
+      <p>
+        Fill out the information below and I'll
+        get back to you about your appointment.
+      </p>
+
+
+      <form
+        action="mailto:YOUR-EMAIL-HERE"
+        method="post"
+        enctype="text/plain"
+      >
+
+        <label>
+          Your Name
+        </label>
+
+        <input
+          type="text"
+          name="Name"
+          placeholder="Your name"
+          required
+        >
+
+
+        <label>
+          Phone Number
+        </label>
+
+        <input
+          type="tel"
+          name="Phone"
+          placeholder="Your phone number"
+          required
+        >
+
+
+        <label>
+          Service
+        </label>
+
+        <select name="Service" required>
+
+          <option value="">
+            Select a service
+          </option>
+
+          <option value="Inside and Outside - $100">
+            Inside & Outside - $100
+          </option>
+
+          <option value="Interior - $65">
+            Interior - $65
+          </option>
+
+          <option value="Exterior - $35">
+            Exterior - $35
+          </option>
+
+        </select>
+
+
+        <label>
+          Preferred Date
+        </label>
+
+        <input
+          type="date"
+          name="Preferred Date"
+          required
+        >
+
+
+        <label>
+          Message
+        </label>
+
+        <textarea
+          name="Message"
+          placeholder="Tell me anything I should know about your vehicle..."
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          Request My Detail
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2 class="title">
+      About <span>Me</span>
+    </h2>
+
+    <div class="about-content">
+
+      <p>
+        I'm a 14-year-old freshman building my own
+        car detailing business. I started detailing
+        because I enjoy working on cars and want to
+        provide affordable, quality service to people
+        in my community.
+      </p>
+
+      <br>
+
+      <p>
+        I take my time, pay attention to the details,
+        and treat every vehicle with care.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      Fresh Finish Detailing
+    </p>
+
+    <p>
+      Student-Owned Car Detailing
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
