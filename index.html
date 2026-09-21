@@ -1,34 +1,1006 @@
-<section id="about" class="about">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <h2 class="section-title">About <span>Fresh Finish</span></h2>
+  <title>Fresh Finish Detailing | West Linn, Oregon</title>
 
-  <div class="about-box">
+  <style>
 
-    <h3>Young Detailer. Serious About Clean Cars.</h3>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <p>
-      Hi! I'm 14 years old and the owner of Fresh Finish Detailing.
-      I'm based in West Linn, Oregon, and I started Fresh Finish
-      because I enjoy working on cars and helping people keep their
-      vehicles looking their best.
-    </p>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <p>
-      Fresh Finish is a mobile detailing service, which means
-      <strong>I can come to your house</strong> and detail your vehicle
-      right at your home.
-    </p>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #05080d;
+      color: white;
+      line-height: 1.6;
+    }
 
-    <p>
-      Whether your car needs a quick exterior clean or a full
-      interior and exterior detail, I'll work hard to give your
-      vehicle a fresh finish.
-    </p>
+    /* NAVIGATION */
 
-    <div class="about-location">
-      Based in <strong>West Linn, Oregon</strong> • Mobile Service Available
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(3, 7, 12, 0.96);
+      border-bottom: 1px solid #263449;
+
+      padding: 16px 7%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2196f3;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #2196f3;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 70px 20px;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.68),
+          rgba(0, 0, 0, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #2196f3;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #e2e8f0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+
+    /* BUTTONS */
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 15px 25px;
+
+      margin: 7px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .primary {
+      background: #2196f3;
+      color: white;
+    }
+
+    .primary:hover {
+      background: #1976d2;
+    }
+
+    .secondary {
+      border: 2px solid #2196f3;
+      color: white;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .secondary:hover {
+      background: #2196f3;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      color: #2196f3;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+      background:
+        linear-gradient(
+          rgba(5, 8, 13, 0.92),
+          rgba(5, 8, 13, 0.97)
+        ),
+        url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=2000&q=85")
+        center / cover;
+    }
+
+    .about-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      background: rgba(17, 24, 39, 0.95);
+
+      border: 1px solid #263449;
+
+      border-radius: 14px;
+
+      padding: 40px;
+
+      text-align: center;
+    }
+
+    .about-box h3 {
+      font-size: 30px;
+
+      margin-bottom: 20px;
+
+      color: #2196f3;
+    }
+
+    .about-box p {
+      color: #cbd5e1;
+
+      font-size: 18px;
+
+      margin-bottom: 18px;
+    }
+
+    .about-location {
+      margin-top: 25px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid #263449;
+
+      color: #2196f3;
+
+      font-weight: bold;
+    }
+
+
+    /* PRICING */
+
+    #pricing {
+      background:
+        linear-gradient(
+          rgba(5, 8, 13, 0.91),
+          rgba(5, 8, 13, 0.96)
+        ),
+        url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=2000&q=85")
+        center / cover fixed;
+    }
+
+    .pricing {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 25px;
+
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.94);
+
+      border: 1px solid #263449;
+
+      border-radius: 14px;
+
+      padding: 30px;
+
+      text-align: center;
+
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+
+      border-color: #2196f3;
+    }
+
+    .card h3 {
+      font-size: 25px;
+
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 38px;
+
+      color: #2196f3;
+
+      font-weight: bold;
+
+      margin: 15px 0;
+    }
+
+    .card ul {
+      list-style: none;
+
+      text-align: left;
+
+      margin-top: 20px;
+    }
+
+    .card li {
+      padding: 7px 0;
+
+      color: #cbd5e1;
+    }
+
+    .note {
+      max-width: 800px;
+
+      margin: 35px auto 0;
+
+      text-align: center;
+
+      color: #94a3b8;
+    }
+
+
+    /* BOOKING */
+
+    .booking {
+      background:
+        linear-gradient(
+          rgba(8, 11, 16, 0.93),
+          rgba(8, 11, 16, 0.97)
+        ),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=85")
+        center / cover fixed;
+    }
+
+    form {
+      max-width: 650px;
+
+      margin: auto;
+
+      background: rgba(17, 24, 39, 0.96);
+
+      padding: 30px;
+
+      border-radius: 14px;
+
+      border: 1px solid #263449;
+    }
+
+    label {
+      display: block;
+
+      margin-top: 18px;
+
+      margin-bottom: 7px;
+
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+
+      padding: 13px;
+
+      border-radius: 7px;
+
+      border: 1px solid #334155;
+
+      background: #080b10;
+
+      color: white;
+
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 120px;
+
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+
+      margin-top: 25px;
+
+      padding: 15px;
+
+      border: none;
+
+      border-radius: 8px;
+
+      background: #2196f3;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1976d2;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(5, 8, 13, 0.91),
+          rgba(5, 8, 13, 0.96)
+        ),
+        url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=2000&q=85")
+        center / cover;
+    }
+
+    .phone {
+      font-size: 30px;
+
+      color: #2196f3;
+
+      font-weight: bold;
+
+      margin: 20px 0;
+    }
+
+    .service-area {
+      color: #cbd5e1;
+
+      font-size: 18px;
+
+      margin-top: 15px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+
+      padding: 30px;
+
+      background: #030509;
+
+      color: #64748b;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav a {
+        margin-left: 7px;
+
+        font-size: 13px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .about-box {
+        padding: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      FRESH FINISH
     </div>
 
-  </div>
+    <div>
 
-</section>
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+      <a href="#booking">
+        Book
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Professional Car Detailing
+        <span>At an Affordable Price.</span>
+      </h1>
+
+      <p>
+        Fresh Finish Detailing helps keep your vehicle
+        looking clean, fresh, and ready for the road.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn primary"
+          href="#booking"
+        >
+          Book a Detail
+        </a>
+
+        <a
+          class="btn secondary"
+          href="tel:3049724003"
+        >
+          Call Now
+        </a>
+
+        <a
+          class="btn secondary"
+          href="sms:3049724003"
+        >
+          Text Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="about">
+
+    <h2 class="section-title">
+      About <span>Fresh Finish</span>
+    </h2>
+
+    <div class="about-box">
+
+      <h3>
+        Young Detailer. Serious About Clean Cars.
+      </h3>
+
+      <p>
+        Hi! I'm 14 years old and the owner of
+        Fresh Finish Detailing.
+      </p>
+
+      <p>
+        I'm based in West Linn, Oregon, and I started
+        Fresh Finish because I enjoy working on cars
+        and helping people keep their vehicles looking
+        their best.
+      </p>
+
+      <p>
+        Fresh Finish is a mobile detailing service,
+        which means
+        <strong>I can come to your house</strong>
+        and detail your vehicle right at your home.
+      </p>
+
+      <p>
+        Whether your car needs a quick exterior clean
+        or a full interior and exterior detail, I'll
+        work hard to give your vehicle a fresh finish.
+      </p>
+
+      <div class="about-location">
+        Based in West Linn, Oregon
+        <br>
+        Mobile Service Available
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRICING -->
+
+  <section id="pricing">
+
+    <h2 class="section-title">
+      Our <span>Pricing</span>
+    </h2>
+
+
+    <div class="pricing">
+
+
+      <!-- FULL DETAIL -->
+
+      <div class="card">
+
+        <h3>
+          Interior + Exterior
+        </h3>
+
+        <div class="price">
+          $100+
+        </div>
+
+        <ul>
+
+          <li>
+            Standard condition — $100
+          </li>
+
+          <li>
+            Very dirty — $120
+          </li>
+
+          <li>
+            Extremely dirty — $135
+          </li>
+
+          <li>
+            Interior cleaning
+          </li>
+
+          <li>
+            Exterior wash
+          </li>
+
+          <li>
+            Final finish
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- INTERIOR -->
+
+      <div class="card">
+
+        <h3>
+          Interior Only
+        </h3>
+
+        <div class="price">
+          $65+
+        </div>
+
+        <ul>
+
+          <li>
+            Standard condition — $65
+          </li>
+
+          <li>
+            Very dirty — $80
+          </li>
+
+          <li>
+            Extremely dirty — $90
+          </li>
+
+          <li>
+            Vacuuming
+          </li>
+
+          <li>
+            Surface cleaning
+          </li>
+
+          <li>
+            Interior finish
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- EXTERIOR -->
+
+      <div class="card">
+
+        <h3>
+          Exterior Only
+        </h3>
+
+        <div class="price">
+          $35+
+        </div>
+
+        <ul>
+
+          <li>
+            Standard condition — $35
+          </li>
+
+          <li>
+            Very dirty — $40
+          </li>
+
+          <li>
+            Extremely dirty — $45
+          </li>
+
+          <li>
+            Exterior wash
+          </li>
+
+          <li>
+            Wheels cleaned
+          </li>
+
+          <li>
+            Final finish
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+
+    <p class="note">
+
+      Prices are starting prices.
+
+      Final pricing may vary depending on the
+      vehicle's condition and the amount of cleaning
+      required.
+
+    </p>
+
+  </section>
+
+
+  <!-- BOOKING -->
+
+  <section id="booking" class="booking">
+
+    <h2 class="section-title">
+      Book Your <span>Detail</span>
+    </h2>
+
+
+    <form onsubmit="sendBooking(event)">
+
+
+      <label for="name">
+        Your Name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your name"
+        required
+      >
+
+
+      <label for="phone">
+        Your Phone Number
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Your phone number"
+        required
+      >
+
+
+      <label for="service">
+        Service
+      </label>
+
+      <select id="service" required>
+
+        <option value="">
+          Choose a service
+        </option>
+
+        <option>
+          Interior + Exterior — Starting at $100
+        </option>
+
+        <option>
+          Interior Only — Starting at $65
+        </option>
+
+        <option>
+          Exterior Only — Starting at $35
+        </option>
+
+      </select>
+
+
+      <label for="condition">
+        Vehicle Condition
+      </label>
+
+      <select id="condition" required>
+
+        <option value="">
+          How dirty is the vehicle?
+        </option>
+
+        <option>
+          Normal
+        </option>
+
+        <option>
+          Very dirty
+        </option>
+
+        <option>
+          Extremely dirty
+        </option>
+
+      </select>
+
+
+      <label for="date">
+        Preferred Date
+      </label>
+
+      <input
+        type="date"
+        id="date"
+        required
+      >
+
+
+      <label for="message">
+        Anything Else?
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="Tell us anything we should know about the vehicle..."
+      ></textarea>
+
+
+      <button type="submit">
+        Send Booking Request
+      </button>
+
+
+    </form>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <h2 class="section-title">
+      Contact <span>Fresh Finish</span>
+    </h2>
+
+    <p>
+      Ready to get your vehicle looking fresh?
+    </p>
+
+
+    <div class="phone">
+      (304) 972-4003
+    </div>
+
+
+    <div class="service-area">
+
+      Based in West Linn, Oregon
+
+      <br>
+
+      Mobile detailing — I come to your house.
+
+    </div>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn primary"
+        href="tel:3049724003"
+      >
+        Call (304) 972-4003
+      </a>
+
+      <a
+        class="btn secondary"
+        href="sms:3049724003"
+      >
+        Text Us
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Fresh Finish Detailing.
+    All Rights Reserved.
+
+  </footer>
+
+
+  <!-- BOOKING SCRIPT -->
+
+  <script>
+
+    function sendBooking(event) {
+
+      event.preventDefault();
+
+
+      const name =
+        document.getElementById("name").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const service =
+        document.getElementById("service").value;
+
+      const condition =
+        document.getElementById("condition").value;
+
+      const date =
+        document.getElementById("date").value;
+
+      const message =
+        document.getElementById("message").value;
+
+
+      const text =
+        "Fresh Finish Detailing Booking Request:\n\n" +
+
+        "Name: " +
+        name +
+        "\n" +
+
+        "Customer Phone: " +
+        phone +
+        "\n" +
+
+        "Service: " +
+        service +
+        "\n" +
+
+        "Vehicle Condition: " +
+        condition +
+        "\n" +
+
+        "Preferred Date: " +
+        date +
+        "\n" +
+
+        "Notes: " +
+        message;
+
+
+      window.location.href =
+        "sms:3049724003?body=" +
+        encodeURIComponent(text);
+
+    }
+
+  </script>
+
+
+</body>
+</html>
