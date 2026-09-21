@@ -1,1006 +1,5776 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Fresh Finish Detailing | West Linn, Oregon</title>
-
-  <style>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #05080d;
-      color: white;
-      line-height: 1.6;
-    }
+    <meta
+        name="description"
+        content="Fresh Finish Detailing — professional mobile car detailing in West Linn, Oregon."
+    >
 
-    /* NAVIGATION */
+    <meta
+        name="theme-color"
+        content="#05070b"
+    >
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    <title>Fresh Finish Detailing | West Linn, Oregon</title>
 
-      background: rgba(3, 7, 12, 0.96);
-      border-bottom: 1px solid #263449;
 
-      padding: 16px 7%;
+    <!-- =========================================================
+         FONTS
+    ========================================================== -->
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #2196f3;
-      letter-spacing: 1px;
-    }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-weight: bold;
-    }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    nav a:hover {
-      color: #2196f3;
-    }
 
+    <!-- =========================================================
+         MAIN STYLES
+    ========================================================== -->
 
-    /* HERO */
+    <style>
 
-    .hero {
-      min-height: 88vh;
+        /* =====================================================
+           ROOT VARIABLES
+        ====================================================== */
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        :root {
 
-      text-align: center;
+            --black: #030507;
 
-      padding: 70px 20px;
+            --black-soft: #070a0f;
 
-      position: relative;
+            --navy: #08111e;
 
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.68),
-          rgba(0, 0, 0, 0.78)
-        ),
-        url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=2000&q=85")
-        center / cover no-repeat;
-    }
+            --navy-light: #0d1b2d;
 
-    .hero-content {
-      max-width: 900px;
-    }
+            --blue: #1687ff;
 
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
+            --blue-light: #48a8ff;
 
-    .hero h1 span {
-      color: #2196f3;
-    }
+            --blue-dark: #0758ad;
 
-    .hero p {
-      font-size: 20px;
-      color: #e2e8f0;
-      max-width: 700px;
-      margin: auto;
-    }
+            --white: #ffffff;
 
+            --white-soft: #dbe7f5;
 
-    /* BUTTONS */
+            --gray: #8d9aac;
 
-    .buttons {
-      margin-top: 30px;
-    }
+            --gray-dark: #566171;
 
-    .btn {
-      display: inline-block;
+            --border: rgba(255,255,255,0.09);
 
-      padding: 15px 25px;
+            --border-blue: rgba(22,135,255,0.28);
 
-      margin: 7px;
+            --shadow: 0 25px 80px rgba(0,0,0,0.45);
 
-      border-radius: 8px;
+            --glow: 0 0 45px rgba(22,135,255,0.25);
 
-      text-decoration: none;
+            --radius: 20px;
 
-      font-weight: bold;
+            --radius-small: 12px;
 
-      transition: 0.2s;
-    }
+            --max-width: 1240px;
 
-    .primary {
-      background: #2196f3;
-      color: white;
-    }
+        }
 
-    .primary:hover {
-      background: #1976d2;
-    }
 
-    .secondary {
-      border: 2px solid #2196f3;
-      color: white;
-      background: rgba(0, 0, 0, 0.35);
-    }
+        /* =====================================================
+           RESET
+        ====================================================== */
 
-    .secondary:hover {
-      background: #2196f3;
-    }
+        * {
 
+            margin: 0;
 
-    /* GENERAL SECTIONS */
+            padding: 0;
 
-    section {
-      padding: 75px 8%;
-    }
+            box-sizing: border-box;
 
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 40px;
-    }
+        }
 
-    .section-title span {
-      color: #2196f3;
-    }
 
+        html {
 
-    /* ABOUT */
+            scroll-behavior: smooth;
 
-    .about {
-      background:
-        linear-gradient(
-          rgba(5, 8, 13, 0.92),
-          rgba(5, 8, 13, 0.97)
-        ),
-        url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=2000&q=85")
-        center / cover;
-    }
+        }
 
-    .about-box {
-      max-width: 850px;
 
-      margin: auto;
+        body {
 
-      background: rgba(17, 24, 39, 0.95);
+            font-family: "Inter", sans-serif;
 
-      border: 1px solid #263449;
+            background: var(--black);
 
-      border-radius: 14px;
+            color: var(--white);
 
-      padding: 40px;
+            overflow-x: hidden;
 
-      text-align: center;
-    }
+            line-height: 1.6;
 
-    .about-box h3 {
-      font-size: 30px;
+        }
 
-      margin-bottom: 20px;
 
-      color: #2196f3;
-    }
+        a {
 
-    .about-box p {
-      color: #cbd5e1;
+            color: inherit;
 
-      font-size: 18px;
+            text-decoration: none;
 
-      margin-bottom: 18px;
-    }
+        }
 
-    .about-location {
-      margin-top: 25px;
 
-      padding-top: 20px;
+        button,
 
-      border-top: 1px solid #263449;
+        input,
 
-      color: #2196f3;
+        select,
 
-      font-weight: bold;
-    }
+        textarea {
 
+            font: inherit;
 
-    /* PRICING */
+        }
 
-    #pricing {
-      background:
-        linear-gradient(
-          rgba(5, 8, 13, 0.91),
-          rgba(5, 8, 13, 0.96)
-        ),
-        url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=2000&q=85")
-        center / cover fixed;
-    }
 
-    .pricing {
-      display: grid;
+        button {
 
-      grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+            cursor: pointer;
 
-      gap: 25px;
+        }
 
-      max-width: 1100px;
 
-      margin: auto;
-    }
+        img {
 
-    .card {
-      background: rgba(17, 24, 39, 0.94);
+            max-width: 100%;
 
-      border: 1px solid #263449;
+            display: block;
 
-      border-radius: 14px;
+        }
 
-      padding: 30px;
 
-      text-align: center;
+        ::selection {
 
-      transition: 0.2s;
-    }
+            background: var(--blue);
 
-    .card:hover {
-      transform: translateY(-5px);
+            color: white;
 
-      border-color: #2196f3;
-    }
+        }
 
-    .card h3 {
-      font-size: 25px;
 
-      margin-bottom: 10px;
-    }
+        /* =====================================================
+           SCROLLBAR
+        ====================================================== */
 
-    .price {
-      font-size: 38px;
+        ::-webkit-scrollbar {
 
-      color: #2196f3;
+            width: 8px;
 
-      font-weight: bold;
+        }
 
-      margin: 15px 0;
-    }
 
-    .card ul {
-      list-style: none;
+        ::-webkit-scrollbar-track {
 
-      text-align: left;
+            background: #030507;
 
-      margin-top: 20px;
-    }
+        }
 
-    .card li {
-      padding: 7px 0;
 
-      color: #cbd5e1;
-    }
+        ::-webkit-scrollbar-thumb {
 
-    .note {
-      max-width: 800px;
+            background: #123b63;
 
-      margin: 35px auto 0;
+            border-radius: 20px;
 
-      text-align: center;
+        }
 
-      color: #94a3b8;
-    }
 
+        ::-webkit-scrollbar-thumb:hover {
 
-    /* BOOKING */
+            background: var(--blue);
 
-    .booking {
-      background:
-        linear-gradient(
-          rgba(8, 11, 16, 0.93),
-          rgba(8, 11, 16, 0.97)
-        ),
-        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=85")
-        center / cover fixed;
-    }
+        }
 
-    form {
-      max-width: 650px;
 
-      margin: auto;
+        /* =====================================================
+           UTILITY
+        ====================================================== */
 
-      background: rgba(17, 24, 39, 0.96);
+        .container {
 
-      padding: 30px;
+            width: min(var(--max-width), calc(100% - 40px));
 
-      border-radius: 14px;
+            margin: auto;
 
-      border: 1px solid #263449;
-    }
+        }
 
-    label {
-      display: block;
 
-      margin-top: 18px;
+        .section {
 
-      margin-bottom: 7px;
+            padding: 120px 0;
 
-      font-weight: bold;
-    }
+            position: relative;
 
-    input,
-    select,
-    textarea {
-      width: 100%;
+        }
 
-      padding: 13px;
 
-      border-radius: 7px;
+        .section-label {
 
-      border: 1px solid #334155;
+            display: inline-flex;
 
-      background: #080b10;
+            align-items: center;
 
-      color: white;
+            gap: 10px;
 
-      font-size: 16px;
-    }
+            color: var(--blue-light);
 
-    textarea {
-      min-height: 120px;
+            font-size: 12px;
 
-      resize: vertical;
-    }
+            font-weight: 800;
 
-    button {
-      width: 100%;
+            letter-spacing: 0.2em;
 
-      margin-top: 25px;
+            text-transform: uppercase;
 
-      padding: 15px;
+            margin-bottom: 18px;
 
-      border: none;
+        }
 
-      border-radius: 8px;
 
-      background: #2196f3;
+        .section-label::before {
 
-      color: white;
+            content: "";
 
-      font-size: 17px;
+            width: 28px;
 
-      font-weight: bold;
+            height: 2px;
 
-      cursor: pointer;
-    }
+            background: var(--blue);
 
-    button:hover {
-      background: #1976d2;
-    }
+            box-shadow: 0 0 12px rgba(22,135,255,0.7);
 
+        }
 
-    /* CONTACT */
 
-    .contact {
-      text-align: center;
+        .section-title {
 
-      background:
-        linear-gradient(
-          rgba(5, 8, 13, 0.91),
-          rgba(5, 8, 13, 0.96)
-        ),
-        url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=2000&q=85")
-        center / cover;
-    }
+            font-family: "Space Grotesk", sans-serif;
 
-    .phone {
-      font-size: 30px;
+            font-size: clamp(38px, 6vw, 72px);
 
-      color: #2196f3;
+            line-height: 0.98;
 
-      font-weight: bold;
+            letter-spacing: -0.055em;
 
-      margin: 20px 0;
-    }
+            max-width: 850px;
 
-    .service-area {
-      color: #cbd5e1;
+            margin-bottom: 24px;
 
-      font-size: 18px;
+        }
 
-      margin-top: 15px;
-    }
 
+        .section-description {
 
-    /* FOOTER */
+            max-width: 680px;
 
-    footer {
-      text-align: center;
+            color: var(--gray);
 
-      padding: 30px;
+            font-size: 17px;
 
-      background: #030509;
+            line-height: 1.8;
 
-      color: #64748b;
-    }
+        }
 
 
-    /* MOBILE */
+        /* =====================================================
+           BACKGROUND EFFECTS
+        ====================================================== */
 
-    @media (max-width: 700px) {
+        .blue-orb {
 
-      nav {
-        padding: 15px 5%;
-      }
+            position: absolute;
 
-      nav a {
-        margin-left: 7px;
+            width: 450px;
 
-        font-size: 13px;
-      }
+            height: 450px;
 
-      section {
-        padding: 55px 5%;
-      }
+            border-radius: 50%;
 
-      .hero {
-        min-height: 80vh;
-      }
+            background: rgba(22,135,255,0.08);
 
-      .about-box {
-        padding: 25px;
-      }
+            filter: blur(90px);
 
-    }
+            pointer-events: none;
 
-  </style>
+        }
+
+
+        .orb-one {
+
+            top: 5%;
+
+            right: -200px;
+
+        }
+
+
+        .orb-two {
+
+            bottom: 5%;
+
+            left: -200px;
+
+        }
+
+
+        .grid-background {
+
+            position: absolute;
+
+            inset: 0;
+
+            opacity: 0.045;
+
+            pointer-events: none;
+
+            background-image:
+
+                linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px),
+
+                linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px);
+
+            background-size: 70px 70px;
+
+            mask-image: linear-gradient(to bottom, black, transparent);
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 18px 0;
+
+            background: rgba(3,5,7,0.7);
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .nav-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-weight: 900;
+
+            font-size: 20px;
+
+            letter-spacing: -0.04em;
+
+        }
+
+
+        .logo-mark {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 12px;
+
+            display: grid;
+
+            place-items: center;
+
+            background:
+
+                linear-gradient(145deg, #1595ff, #0753a1);
+
+            box-shadow:
+
+                0 0 30px rgba(22,135,255,0.3);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .logo-mark::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 70px;
+
+            height: 2px;
+
+            background: white;
+
+            transform: rotate(-45deg);
+
+            opacity: 0.35;
+
+        }
+
+
+        .logo-mark span {
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            z-index: 1;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            list-style: none;
+
+        }
+
+
+        .nav-links a {
+
+            color: #aeb9c8;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+
+            position: relative;
+
+        }
+
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -8px;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--blue);
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: white;
+
+        }
+
+
+        .nav-links a:hover::after {
+
+            width: 100%;
+
+        }
+
+
+        .nav-button {
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            background: var(--blue);
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            box-shadow: 0 0 25px rgba(22,135,255,0.25);
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .nav-button:hover {
+
+            transform: translateY(-2px);
+
+            background: #3298ff;
+
+            box-shadow: 0 0 35px rgba(22,135,255,0.45);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+
+                    90deg,
+
+                    rgba(2,5,8,0.98) 0%,
+
+                    rgba(2,5,8,0.82) 42%,
+
+                    rgba(2,5,8,0.35) 100%
+
+                ),
+
+                url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=2200&q=90")
+
+                center / cover no-repeat;
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+
+                    circle at 72% 50%,
+
+                    rgba(22,135,255,0.18),
+
+                    transparent 35%
+
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: auto 0 0 0;
+
+            height: 240px;
+
+            background: linear-gradient(
+
+                transparent,
+
+                var(--black)
+
+            );
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            padding-top: 90px;
+
+            max-width: 780px;
+
+        }
+
+
+        .hero-eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 8px 13px;
+
+            border: 1px solid rgba(72,168,255,0.25);
+
+            background: rgba(4,14,25,0.65);
+
+            backdrop-filter: blur(12px);
+
+            border-radius: 999px;
+
+            color: #8dc9ff;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 26px;
+
+        }
+
+
+        .status-dot {
+
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #2aa1ff;
+
+            box-shadow: 0 0 15px #1687ff;
+
+            animation: pulseDot 2s infinite;
+
+        }
+
+
+        @keyframes pulseDot {
+
+            0%, 100% {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+            50% {
+
+                opacity: 0.4;
+
+                transform: scale(0.75);
+
+            }
+
+        }
+
+
+        .hero-title {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(58px, 9vw, 120px);
+
+            font-weight: 700;
+
+            line-height: 0.88;
+
+            letter-spacing: -0.07em;
+
+            max-width: 950px;
+
+        }
+
+
+        .hero-title .blue {
+
+            color: var(--blue-light);
+
+            text-shadow: 0 0 50px rgba(22,135,255,0.2);
+
+        }
+
+
+        .hero-description {
+
+            max-width: 650px;
+
+            margin-top: 30px;
+
+            color: #aab7c7;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+
+        }
+
+
+        .hero-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .button-primary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            min-height: 54px;
+
+            padding: 0 25px;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #1a91ff,
+
+                #075db5
+
+            );
+
+            color: white;
+
+            font-weight: 800;
+
+            font-size: 14px;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            box-shadow:
+
+                0 15px 45px rgba(22,135,255,0.22);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .button-primary:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+
+                0 20px 55px rgba(22,135,255,0.35);
+
+        }
+
+
+        .button-secondary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 54px;
+
+            padding: 0 25px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(255,255,255,0.13);
+
+            background: rgba(255,255,255,0.045);
+
+            color: white;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            backdrop-filter: blur(12px);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .button-secondary:hover {
+
+            background: rgba(255,255,255,0.09);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .hero-bottom {
+
+            position: absolute;
+
+            z-index: 5;
+
+            bottom: 40px;
+
+            left: 0;
+
+            right: 0;
+
+        }
+
+
+        .hero-stats {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            max-width: 650px;
+
+            border-top: 1px solid rgba(255,255,255,0.12);
+
+            padding-top: 22px;
+
+        }
+
+
+        .hero-stat {
+
+            padding-right: 25px;
+
+        }
+
+
+        .hero-stat + .hero-stat {
+
+            border-left: 1px solid rgba(255,255,255,0.1);
+
+            padding-left: 25px;
+
+        }
+
+
+        .hero-stat strong {
+
+            display: block;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .hero-stat span {
+
+            color: #7e8b9b;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           MARQUEE
+        ====================================================== */
+
+        .marquee {
+
+            overflow: hidden;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+            background: #05090f;
+
+        }
+
+
+        .marquee-track {
+
+            display: flex;
+
+            width: max-content;
+
+            animation: marquee 28s linear infinite;
+
+        }
+
+
+        .marquee-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+            padding: 23px 30px;
+
+            color: #8291a3;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .marquee-item span {
+
+            color: var(--blue);
+
+        }
+
+
+        @keyframes marquee {
+
+            from {
+
+                transform: translateX(0);
+
+            }
+
+            to {
+
+                transform: translateX(-50%);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .intro {
+
+            background: var(--black);
+
+        }
+
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .intro-copy {
+
+            position: relative;
+
+        }
+
+
+        .intro-copy p {
+
+            color: var(--gray);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .intro-image {
+
+            min-height: 580px;
+
+            border-radius: 26px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+
+                    180deg,
+
+                    transparent 30%,
+
+                    rgba(3,5,7,0.7)
+
+                ),
+
+                url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1300&q=90")
+
+                center / cover;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+        }
+
+
+        .intro-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 20px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 18px;
+
+        }
+
+
+        .image-tag {
+
+            position: absolute;
+
+            left: 28px;
+
+            bottom: 28px;
+
+            z-index: 2;
+
+            padding: 14px 18px;
+
+            border-radius: 12px;
+
+            background: rgba(3,5,7,0.75);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+        .image-tag strong {
+
+            display: block;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 17px;
+
+        }
+
+
+        .image-tag span {
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ====================================================== */
+
+        .services {
+
+            background:
+
+                linear-gradient(
+
+                    180deg,
+
+                    #05080d,
+
+                    #070d15
+
+                );
+
+        }
+
+
+        .services-heading {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            gap: 40px;
+
+            margin-bottom: 55px;
+
+        }
+
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .service-card {
+
+            min-height: 430px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            overflow: hidden;
+
+            position: relative;
+
+            background: #080c12;
+
+            transition: 0.4s ease;
+
+        }
+
+
+        .service-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(22,135,255,0.4);
+
+            box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+
+        }
+
+
+        .service-image {
+
+            height: 250px;
+
+            background-size: cover;
+
+            background-position: center;
+
+            position: relative;
+
+        }
+
+
+        .service-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(
+
+                transparent 20%,
+
+                rgba(3,5,7,0.95)
+
+            );
+
+        }
+
+
+        .service-one {
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1000&q=85");
+
+        }
+
+
+        .service-two {
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c9?auto=format&fit=crop&w=1000&q=85");
+
+        }
+
+
+        .service-three {
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=85");
+
+        }
+
+
+        .service-content {
+
+            position: absolute;
+
+            left: 25px;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            z-index: 2;
+
+        }
+
+
+        .service-number {
+
+            color: var(--blue-light);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.15em;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .service-content h3 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .service-content p {
+
+            color: #8996a6;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           FEATURE STRIP
+        ====================================================== */
+
+        .feature-strip {
+
+            padding: 35px 0;
+
+            background: #08111c;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .feature-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .feature-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+
+        .feature-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            border-radius: 12px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid var(--border-blue);
+
+            background: rgba(22,135,255,0.08);
+
+            color: var(--blue-light);
+
+            font-weight: 900;
+
+        }
+
+
+        .feature-item strong {
+
+            display: block;
+
+            font-size: 13px;
+
+        }
+
+
+        .feature-item span {
+
+            display: block;
+
+            color: var(--gray);
+
+            font-size: 11px;
+
+            margin-top: 2px;
+
+        }
+
+
+        /* =====================================================
+           PRICING
+        ====================================================== */
+
+        .pricing {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .pricing::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 700px;
+
+            height: 700px;
+
+            border-radius: 50%;
+
+            background: rgba(22,135,255,0.05);
+
+            filter: blur(100px);
+
+            top: 15%;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+        }
+
+
+        .pricing-heading {
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .pricing-heading .section-title {
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+        }
+
+
+        .pricing-heading .section-description {
+
+            margin: auto;
+
+        }
+
+
+        .pricing-grid {
+
+            margin-top: 60px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .price-card {
+
+            position: relative;
+
+            padding: 36px 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            background:
+
+                linear-gradient(
+
+                    145deg,
+
+                    rgba(15,23,34,0.95),
+
+                    rgba(6,9,14,0.95)
+
+                );
+
+            overflow: hidden;
+
+            transition: 0.35s ease;
+
+        }
+
+
+        .price-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(22,135,255,0.35);
+
+        }
+
+
+        .price-card.featured {
+
+            border-color: rgba(22,135,255,0.5);
+
+            box-shadow: 0 0 55px rgba(22,135,255,0.1);
+
+        }
+
+
+        .popular {
+
+            position: absolute;
+
+            top: 18px;
+
+            right: 18px;
+
+            padding: 7px 10px;
+
+            border-radius: 7px;
+
+            background: var(--blue);
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .price-card h3 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 23px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .price-card .small-text {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        .price {
+
+            margin: 25px 0;
+
+            display: flex;
+
+            align-items: baseline;
+
+            gap: 4px;
+
+        }
+
+
+        .price strong {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 54px;
+
+            letter-spacing: -0.06em;
+
+        }
+
+
+        .price span {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        .price-card ul {
+
+            list-style: none;
+
+            border-top: 1px solid var(--border);
+
+            padding-top: 22px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .price-card li {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #a8b3c0;
+
+            font-size: 13px;
+
+            margin: 13px 0;
+
+        }
+
+
+        .check {
+
+            width: 18px;
+
+            height: 18px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background: rgba(22,135,255,0.12);
+
+            color: var(--blue-light);
+
+            font-size: 10px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .condition-box {
+
+            margin-top: 55px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 28px;
+
+            background: rgba(255,255,255,0.025);
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .condition-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .condition {
+
+            padding: 22px;
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,0.025);
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+        }
+
+
+        .condition h4 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .condition p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ====================================================== */
+
+        .process {
+
+            background: #060a10;
+
+        }
+
+
+        .process-grid {
+
+            margin-top: 60px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .process-card {
+
+            position: relative;
+
+            padding: 30px 25px;
+
+            min-height: 230px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            background: linear-gradient(
+
+                145deg,
+
+                rgba(255,255,255,0.035),
+
+                rgba(255,255,255,0.01)
+
+            );
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .process-card:hover {
+
+            border-color: var(--border-blue);
+
+            background: rgba(22,135,255,0.04);
+
+        }
+
+
+        .process-number {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            color: rgba(22,135,255,0.16);
+
+            line-height: 1;
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .process-card h3 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 19px;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .process-card p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           MOBILE DETAILING
+        ====================================================== */
+
+        .mobile-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .mobile-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .mobile-image {
+
+            min-height: 620px;
+
+            border-radius: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+
+                    180deg,
+
+                    transparent,
+
+                    rgba(3,5,7,0.9)
+
+                ),
+
+                url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1400&q=90")
+
+                center / cover;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+        }
+
+
+        .mobile-image-card {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 25px;
+
+            right: 25px;
+
+            padding: 22px;
+
+            border-radius: 16px;
+
+            background: rgba(3,5,7,0.7);
+
+            backdrop-filter: blur(16px);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+        }
+
+
+        .mobile-image-card strong {
+
+            display: block;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .mobile-image-card span {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        .mobile-list {
+
+            margin-top: 35px;
+
+            display: grid;
+
+            gap: 15px;
+
+        }
+
+
+        .mobile-item {
+
+            display: grid;
+
+            grid-template-columns: 46px 1fr;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,0.02);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .mobile-item:hover {
+
+            border-color: var(--border-blue);
+
+            transform: translateX(5px);
+
+        }
+
+
+        .mobile-item-icon {
+
+            width: 46px;
+
+            height: 46px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 12px;
+
+            background: rgba(22,135,255,0.1);
+
+            border: 1px solid rgba(22,135,255,0.2);
+
+            color: var(--blue-light);
+
+            font-weight: 900;
+
+        }
+
+
+        .mobile-item h4 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 15px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .mobile-item p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           SHOWCASE
+        ====================================================== */
+
+        .showcase {
+
+            background: #05080d;
+
+        }
+
+
+        .showcase-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.3fr 0.7fr;
+
+            grid-template-rows: 290px 290px;
+
+            gap: 15px;
+
+            margin-top: 60px;
+
+        }
+
+
+        .showcase-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--border);
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .showcase-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: linear-gradient(
+
+                180deg,
+
+                transparent 35%,
+
+                rgba(0,0,0,0.85)
+
+            );
+
+        }
+
+
+        .showcase-card:first-child {
+
+            grid-row: span 2;
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1400&q=90");
+
+        }
+
+
+        .showcase-card:nth-child(2) {
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1000&q=90");
+
+        }
+
+
+        .showcase-card:nth-child(3) {
+
+            background-image:
+
+                url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1000&q=90");
+
+        }
+
+
+        .showcase-content {
+
+            position: absolute;
+
+            z-index: 2;
+
+            left: 22px;
+
+            bottom: 22px;
+
+        }
+
+
+        .showcase-content span {
+
+            color: #83c5ff;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.15em;
+
+        }
+
+
+        .showcase-content h3 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 21px;
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about {
+
+            background:
+
+                radial-gradient(
+
+                    circle at 80% 20%,
+
+                    rgba(22,135,255,0.07),
+
+                    transparent 30%
+
+                ),
+
+                #05080d;
+
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .about-box {
+
+            padding: 40px;
+
+            border-radius: 24px;
+
+            background:
+
+                linear-gradient(
+
+                    145deg,
+
+                    rgba(255,255,255,0.045),
+
+                    rgba(255,255,255,0.015)
+
+                );
+
+            border: 1px solid var(--border);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .about-list {
+
+            list-style: none;
+
+            display: grid;
+
+            gap: 17px;
+
+        }
+
+
+        .about-list li {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding-bottom: 17px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            color: #bdc8d5;
+
+            font-size: 14px;
+
+        }
+
+
+        .about-list li:last-child {
+
+            border-bottom: 0;
+
+            padding-bottom: 0;
+
+        }
+
+
+        .about-check {
+
+            width: 25px;
+
+            height: 25px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 8px;
+
+            background: rgba(22,135,255,0.12);
+
+            border: 1px solid rgba(22,135,255,0.2);
+
+            color: var(--blue-light);
+
+            font-size: 11px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .about-tagline {
+
+            margin-top: 30px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+        }
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        .faq {
+
+            background: #060a10;
+
+        }
+
+
+        .faq-wrapper {
+
+            max-width: 850px;
+
+            margin: 60px auto 0;
+
+        }
+
+
+        .faq-item {
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+        .faq-item:last-child {
+
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+        .faq-question {
+
+            width: 100%;
+
+            border: 0;
+
+            background: transparent;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 25px 0;
+
+            text-align: left;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 17px;
+
+            font-weight: 600;
+
+        }
+
+
+        .faq-plus {
+
+            width: 32px;
+
+            height: 32px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            color: var(--blue-light);
+
+            transition: 0.3s ease;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .faq-answer {
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: max-height 0.4s ease;
+
+        }
+
+
+        .faq-answer p {
+
+            color: var(--gray);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            padding: 0 50px 25px 0;
+
+        }
+
+
+        .faq-item.active .faq-plus {
+
+            transform: rotate(45deg);
+
+            background: rgba(22,135,255,0.1);
+
+            border-color: var(--border-blue);
+
+        }
+
+
+        .faq-item.active .faq-answer {
+
+            max-height: 300px;
+
+        }
+
+
+        /* =====================================================
+           BOOKING
+        ====================================================== */
+
+        .booking {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+
+                    135deg,
+
+                    #07101c,
+
+                    #030507 70%
+
+                );
+
+        }
+
+
+        .booking::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+
+            height: 600px;
+
+            background: rgba(22,135,255,0.09);
+
+            border-radius: 50%;
+
+            filter: blur(100px);
+
+            right: -250px;
+
+            top: -150px;
+
+        }
+
+
+        .booking-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.75fr 1.25fr;
+
+            gap: 70px;
+
+            align-items: start;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .booking-info p {
+
+            color: var(--gray);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .booking-details {
+
+            display: grid;
+
+            gap: 12px;
+
+        }
+
+
+        .booking-detail {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            color: #b7c2cf;
+
+            font-size: 13px;
+
+        }
+
+
+        .booking-detail-icon {
+
+            width: 36px;
+
+            height: 36px;
+
+            border-radius: 10px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: rgba(22,135,255,0.09);
+
+            border: 1px solid rgba(22,135,255,0.18);
+
+            color: var(--blue-light);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+        }
+
+
+        .booking-form {
+
+            padding: 35px;
+
+            border-radius: 24px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            background: rgba(255,255,255,0.035);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .form-header {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .form-header h3 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 27px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .form-header p {
+
+            color: var(--gray);
+
+            font-size: 12px;
+
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+
+        }
+
+
+        .form-group.full {
+
+            grid-column: 1 / -1;
+
+        }
+
+
+        .form-group label {
+
+            color: #9caabb;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+        }
+
+
+        .form-group input,
+
+        .form-group select,
+
+        .form-group textarea {
+
+            width: 100%;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            background: rgba(0,0,0,0.3);
+
+            color: white;
+
+            outline: none;
+
+            border-radius: 10px;
+
+            padding: 14px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .form-group input::placeholder,
+
+        .form-group textarea::placeholder {
+
+            color: #596575;
+
+        }
+
+
+        .form-group input:focus,
+
+        .form-group select:focus,
+
+        .form-group textarea:focus {
+
+            border-color: rgba(22,135,255,0.6);
+
+            box-shadow: 0 0 0 3px rgba(22,135,255,0.08);
+
+        }
+
+
+        .form-group select option {
+
+            background: #08111c;
+
+            color: white;
+
+        }
+
+
+        .form-group textarea {
+
+            min-height: 120px;
+
+            resize: vertical;
+
+        }
+
+
+        .form-submit {
+
+            width: 100%;
+
+            margin-top: 18px;
+
+            border: 0;
+
+            min-height: 55px;
+
+            border-radius: 11px;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #1a91ff,
+
+                #075db5
+
+            );
+
+            color: white;
+
+            font-weight: 800;
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 15px 35px rgba(22,135,255,0.18);
+
+        }
+
+
+        .form-submit:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 18px 45px rgba(22,135,255,0.3);
+
+        }
+
+
+        .form-note {
+
+            margin-top: 12px;
+
+            text-align: center;
+
+            color: #596575;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        .contact {
+
+            padding: 75px 0;
+
+            background: #030507;
+
+            border-top: 1px solid var(--border);
+
+        }
+
+
+        .contact-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            border: 1px solid rgba(22,135,255,0.2);
+
+            background:
+
+                linear-gradient(
+
+                    120deg,
+
+                    rgba(22,135,255,0.08),
+
+                    rgba(255,255,255,0.02)
+
+                );
+
+        }
+
+
+        .contact-inner h2 {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(27px, 4vw, 42px);
+
+            line-height: 1;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .contact-inner p {
+
+            color: var(--gray);
+
+            font-size: 13px;
+
+        }
+
+
+        .phone-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 55px;
+
+            padding: 0 25px;
+
+            border-radius: 11px;
+
+            background: white;
+
+            color: #05070b;
+
+            font-weight: 900;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .phone-link:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 15px 35px rgba(255,255,255,0.1);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #020304;
+
+            padding: 70px 0 30px;
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns: 1.4fr 0.7fr 0.7fr;
+
+            gap: 60px;
+
+            padding-bottom: 55px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+        }
+
+
+        .footer-brand p {
+
+            color: #667384;
+
+            font-size: 13px;
+
+            max-width: 380px;
+
+            margin-top: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .footer-column h4 {
+
+            font-size: 11px;
+
+            color: #aeb9c7;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #647181;
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding-top: 25px;
+
+        }
+
+
+        .footer-bottom span {
+
+            color: #4e5968;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+        .back-top {
+
+            position: fixed;
+
+            right: 22px;
+
+            bottom: 22px;
+
+            width: 44px;
+
+            height: 44px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 12px;
+
+            background: rgba(8,15,24,0.85);
+
+            backdrop-filter: blur(15px);
+
+            color: white;
+
+            display: grid;
+
+            place-items: center;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transform: translateY(15px);
+
+            transition: 0.3s ease;
+
+            z-index: 999;
+
+        }
+
+
+        .back-top.visible {
+
+            opacity: 1;
+
+            pointer-events: auto;
+
+            transform: translateY(0);
+
+        }
+
+
+        .back-top:hover {
+
+            border-color: var(--border-blue);
+
+            color: var(--blue-light);
+
+        }
+
+
+        /* =====================================================
+           REVEAL ANIMATIONS
+        ====================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+
+                opacity 0.8s ease,
+
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+
+            .intro-grid,
+
+            .mobile-grid,
+
+            .booking-grid,
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .intro-image {
+
+                min-height: 480px;
+
+            }
+
+
+            .mobile-image {
+
+                min-height: 500px;
+
+            }
+
+
+            .services-grid,
+
+            .pricing-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .process-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .feature-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .showcase-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+                grid-template-rows: 300px 300px;
+
+            }
+
+
+            .showcase-card:first-child {
+
+                grid-column: 1 / -1;
+
+                grid-row: auto;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width: min(100% - 28px, var(--max-width));
+
+            }
+
+
+            .section {
+
+                padding: 85px 0;
+
+            }
+
+
+            .hero {
+
+                min-height: 850px;
+
+                background-position: 62% center;
+
+            }
+
+
+            .hero-content {
+
+                padding-top: 80px;
+
+            }
+
+
+            .hero-title {
+
+                font-size: clamp(52px, 17vw, 85px);
+
+            }
+
+
+            .hero-description {
+
+                font-size: 15px;
+
+            }
+
+
+            .hero-bottom {
+
+                bottom: 25px;
+
+            }
+
+
+            .hero-stats {
+
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+
+
+            .hero-stat {
+
+                padding-right: 10px;
+
+            }
+
+
+            .hero-stat + .hero-stat {
+
+                padding-left: 10px;
+
+            }
+
+
+            .hero-stat strong {
+
+                font-size: 14px;
+
+            }
+
+
+            .hero-stat span {
+
+                font-size: 8px;
+
+            }
+
+
+            .services-heading {
+
+                display: block;
+
+            }
+
+
+            .services-grid,
+
+            .pricing-grid,
+
+            .condition-grid,
+
+            .process-grid,
+
+            .feature-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .service-card {
+
+                min-height: 390px;
+
+            }
+
+
+            .pricing-grid {
+
+                margin-top: 40px;
+
+            }
+
+
+            .condition-box {
+
+                padding: 18px;
+
+            }
+
+
+            .showcase-grid {
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                grid-template-rows: repeat(3, 270px);
+
+            }
+
+
+            .showcase-card:first-child {
+
+                grid-column: auto;
+
+            }
+
+
+            .about-box {
+
+                padding: 25px;
+
+            }
+
+
+            .booking-form {
+
+                padding: 22px;
+
+            }
+
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .form-group.full {
+
+                grid-column: auto;
+
+            }
+
+
+            .contact-inner {
+
+                display: block;
+
+                padding: 28px;
+
+            }
+
+
+            .phone-link {
+
+                margin-top: 22px;
+
+                width: 100%;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+            }
+
+
+            .footer-bottom {
+
+                display: block;
+
+            }
+
+
+            .footer-bottom span {
+
+                display: block;
+
+                margin-bottom: 7px;
+
+            }
+
+
+            .logo {
+
+                font-size: 17px;
+
+            }
+
+
+            .nav-button {
+
+                padding: 10px 13px;
+
+                font-size: 11px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- NAVIGATION -->
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
 
-  <nav>
+    <header class="navbar">
 
-    <div class="logo">
-      FRESH FINISH
-    </div>
+        <div class="container nav-inner">
 
-    <div>
+            <a href="#home" class="logo">
 
-      <a href="#about">
-        About
-      </a>
+                <div class="logo-mark">
 
-      <a href="#pricing">
-        Pricing
-      </a>
+                    <span>FF</span>
 
-      <a href="#booking">
-        Book
-      </a>
+                </div>
 
-      <a href="#contact">
-        Contact
-      </a>
+                <span>FRESH FINISH</span>
 
-    </div>
-
-  </nav>
+            </a>
 
 
-  <!-- HERO -->
+            <nav>
 
-  <section class="hero">
+                <ul class="nav-links">
 
-    <div class="hero-content">
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
 
-      <h1>
-        Professional Car Detailing
-        <span>At an Affordable Price.</span>
-      </h1>
+                    <li>
+                        <a href="#pricing">Pricing</a>
+                    </li>
 
-      <p>
-        Fresh Finish Detailing helps keep your vehicle
-        looking clean, fresh, and ready for the road.
-      </p>
+                    <li>
+                        <a href="#process">How It Works</a>
+                    </li>
 
-      <div class="buttons">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
 
-        <a
-          class="btn primary"
-          href="#booking"
-        >
-          Book a Detail
-        </a>
+                    <li>
+                        <a href="#faq">FAQ</a>
+                    </li>
 
-        <a
-          class="btn secondary"
-          href="tel:3049724003"
-        >
-          Call Now
-        </a>
+                </ul>
 
-        <a
-          class="btn secondary"
-          href="sms:3049724003"
-        >
-          Text Me
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+            </nav>
 
 
-  <!-- ABOUT -->
+            <a href="#booking" class="nav-button">
+                BOOK A DETAIL
+            </a>
 
-  <section id="about" class="about">
-
-    <h2 class="section-title">
-      About <span>Fresh Finish</span>
-    </h2>
-
-    <div class="about-box">
-
-      <h3>
-        Young Detailer. Serious About Clean Cars.
-      </h3>
-
-      <p>
-        Hi! I'm 14 years old and the owner of
-        Fresh Finish Detailing.
-      </p>
-
-      <p>
-        I'm based in West Linn, Oregon, and I started
-        Fresh Finish because I enjoy working on cars
-        and helping people keep their vehicles looking
-        their best.
-      </p>
-
-      <p>
-        Fresh Finish is a mobile detailing service,
-        which means
-        <strong>I can come to your house</strong>
-        and detail your vehicle right at your home.
-      </p>
-
-      <p>
-        Whether your car needs a quick exterior clean
-        or a full interior and exterior detail, I'll
-        work hard to give your vehicle a fresh finish.
-      </p>
-
-      <div class="about-location">
-        Based in West Linn, Oregon
-        <br>
-        Mobile Service Available
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRICING -->
-
-  <section id="pricing">
-
-    <h2 class="section-title">
-      Our <span>Pricing</span>
-    </h2>
-
-
-    <div class="pricing">
-
-
-      <!-- FULL DETAIL -->
-
-      <div class="card">
-
-        <h3>
-          Interior + Exterior
-        </h3>
-
-        <div class="price">
-          $100+
         </div>
 
-        <ul>
-
-          <li>
-            Standard condition — $100
-          </li>
-
-          <li>
-            Very dirty — $120
-          </li>
-
-          <li>
-            Extremely dirty — $135
-          </li>
-
-          <li>
-            Interior cleaning
-          </li>
-
-          <li>
-            Exterior wash
-          </li>
-
-          <li>
-            Final finish
-          </li>
-
-        </ul>
-
-      </div>
+    </header>
 
 
-      <!-- INTERIOR -->
 
-      <div class="card">
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
 
-        <h3>
-          Interior Only
-        </h3>
+    <main>
 
-        <div class="price">
-          $65+
+        <section class="hero" id="home">
+
+            <div class="grid-background"></div>
+
+            <div class="blue-orb orb-one"></div>
+
+
+            <div class="container">
+
+                <div class="hero-content reveal">
+
+                    <div class="hero-eyebrow">
+
+                        <span class="status-dot"></span>
+
+                        MOBILE DETAILING • WEST LINN, OREGON
+
+                    </div>
+
+
+                    <h1 class="hero-title">
+
+                        A FRESH
+
+                        <br>
+
+                        <span class="blue">FINISH.</span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Professional mobile car detailing built around
+                        convenience, attention to detail, and a clean
+                        finish you can actually see.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a href="#booking" class="button-primary">
+
+                            BOOK A DETAIL
+
+                            <span>→</span>
+
+                        </a>
+
+
+                        <a href="#pricing" class="button-secondary">
+
+                            VIEW PRICING
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <div class="container">
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+
+                            <strong>Mobile</strong>
+
+                            <span>We come to you</span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>West Linn</strong>
+
+                            <span>Oregon based</span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>2 Detailers</strong>
+
+                            <span>Student owned</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MARQUEE
+        ====================================================== -->
+
+        <div class="marquee">
+
+            <div class="marquee-track">
+
+                <div class="marquee-item">
+                    MOBILE DETAILING <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    WEST LINN OREGON <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    INTERIOR <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    EXTERIOR <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    FULL DETAIL <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    FRESH FINISH <span>•</span>
+                </div>
+
+
+                <div class="marquee-item">
+                    MOBILE DETAILING <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    WEST LINN OREGON <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    INTERIOR <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    EXTERIOR <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    FULL DETAIL <span>•</span>
+                </div>
+
+                <div class="marquee-item">
+                    FRESH FINISH <span>•</span>
+                </div>
+
+            </div>
+
         </div>
 
-        <ul>
-
-          <li>
-            Standard condition — $65
-          </li>
-
-          <li>
-            Very dirty — $80
-          </li>
-
-          <li>
-            Extremely dirty — $90
-          </li>
-
-          <li>
-            Vacuuming
-          </li>
-
-          <li>
-            Surface cleaning
-          </li>
-
-          <li>
-            Interior finish
-          </li>
-
-        </ul>
-
-      </div>
 
 
-      <!-- EXTERIOR -->
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
 
-      <div class="card">
+        <section class="section intro">
 
-        <h3>
-          Exterior Only
-        </h3>
+            <div class="container">
 
-        <div class="price">
-          $35+
+                <div class="intro-grid">
+
+
+                    <div class="intro-copy reveal">
+
+                        <div class="section-label">
+                            THE FRESH FINISH STANDARD
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            YOUR CAR.
+
+                            <br>
+
+                            <span style="color:#1687ff;">
+                                FRESH AGAIN.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Your car gets dirty. That's normal.
+                            Getting it cleaned shouldn't be difficult.
+
+                        </p>
+
+
+                        <p>
+
+                            Fresh Finish Detailing is a mobile detailing
+                            service based in West Linn, Oregon. We bring
+                            the service directly to your driveway so you
+                            don't have to spend your day sitting at a shop.
+
+                        </p>
+
+
+                        <p>
+
+                            We're two high schoolers building something
+                            of our own and taking every detail seriously.
+
+                        </p>
+
+
+                        <a href="#about" class="button-secondary">
+
+                            MEET FRESH FINISH
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="intro-image reveal">
+
+                        <div class="image-tag">
+
+                            <strong>DETAIL. WITHOUT THE HASSLE.</strong>
+
+                            <span>
+                                Mobile service throughout West Linn.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICES
+        ========================================================== -->
+
+        <section class="section services" id="services">
+
+            <div class="container">
+
+                <div class="services-heading">
+
+                    <div>
+
+                        <div class="section-label">
+                            WHAT WE DO
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            BUILT AROUND
+
+                            <br>
+
+                            <span style="color:#1687ff;">
+                                YOUR CAR.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-description">
+
+                        Choose the level of service your vehicle needs.
+                        Whether you want the inside cleaned, the outside
+                        refreshed, or the complete package, we've got you
+                        covered.
+
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-image service-one"></div>
+
+                        <div class="service-content">
+
+                            <div class="service-number">
+                                01 / INTERIOR
+                            </div>
+
+                            <h3>Interior Detail</h3>
+
+                            <p>
+                                A complete interior refresh designed to
+                                remove dirt, dust, debris, and everyday
+                                buildup.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-image service-two"></div>
+
+                        <div class="service-content">
+
+                            <div class="service-number">
+                                02 / EXTERIOR
+                            </div>
+
+                            <h3>Exterior Detail</h3>
+
+                            <p>
+                                Wash, clean, and refresh the outside of
+                                your vehicle for a noticeably cleaner
+                                finish.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="service-card reveal">
+
+                        <div class="service-image service-three"></div>
+
+                        <div class="service-content">
+
+                            <div class="service-number">
+                                03 / COMPLETE
+                            </div>
+
+                            <h3>Interior + Exterior</h3>
+
+                            <p>
+                                The full Fresh Finish experience. Clean
+                                inside, clean outside, and ready to go.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FEATURE STRIP
+        ========================================================== -->
+
+        <section class="feature-strip">
+
+            <div class="container">
+
+                <div class="feature-grid">
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            01
+                        </div>
+
+                        <div>
+
+                            <strong>Mobile Service</strong>
+
+                            <span>
+                                We come to your driveway.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            02
+                        </div>
+
+                        <div>
+
+                            <strong>Simple Booking</strong>
+
+                            <span>
+                                Request your detail online.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            03
+                        </div>
+
+                        <div>
+
+                            <strong>Clear Pricing</strong>
+
+                            <span>
+                                Know the price before booking.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            04
+                        </div>
+
+                        <div>
+
+                            <strong>Fresh Results</strong>
+
+                            <span>
+                                Attention goes into every detail.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRICING
+        ========================================================== -->
+
+        <section class="section pricing" id="pricing">
+
+            <div class="container">
+
+                <div class="pricing-heading reveal">
+
+                    <div class="section-label">
+                        SIMPLE PRICING
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        PICK YOUR
+
+                        <br>
+
+                        <span style="color:#1687ff;">
+                            FRESH FINISH.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Prices depend on the condition of the vehicle.
+                        We keep the pricing simple so you know what to
+                        expect.
+
+                    </p>
+
+                </div>
+
+
+                <div class="pricing-grid">
+
+
+                    <!-- FULL DETAIL -->
+
+                    <div class="price-card featured reveal">
+
+                        <div class="popular">
+                            MOST COMPLETE
+                        </div>
+
+
+                        <h3>Interior + Exterior</h3>
+
+                        <div class="small-text">
+                            Complete detail
+                        </div>
+
+
+                        <div class="price">
+
+                            <strong>$100</strong>
+
+                            <span>
+                                starting
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Standard condition — $100
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Very dirty — $120
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Extremely dirty — $135
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Interior + exterior
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Mobile service
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- INTERIOR -->
+
+                    <div class="price-card reveal">
+
+                        <h3>Interior Only</h3>
+
+                        <div class="small-text">
+                            Inside of the vehicle
+                        </div>
+
+
+                        <div class="price">
+
+                            <strong>$65</strong>
+
+                            <span>
+                                starting
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Standard condition — $65
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Very dirty — $80
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Extremely dirty — $90
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Interior-focused service
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Mobile service
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- EXTERIOR -->
+
+                    <div class="price-card reveal">
+
+                        <h3>Exterior Only</h3>
+
+                        <div class="small-text">
+                            Outside of the vehicle
+                        </div>
+
+
+                        <div class="price">
+
+                            <strong>$35</strong>
+
+                            <span>
+                                starting
+                            </span>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Standard condition — $35
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Very dirty — $40
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Extremely dirty — $45
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Exterior-focused service
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                Mobile service
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="condition-box reveal">
+
+                    <div class="section-label">
+                        CONDITION PRICING
+                    </div>
+
+
+                    <div class="condition-grid">
+
+
+                        <div class="condition">
+
+                            <h4>Standard</h4>
+
+                            <p>
+                                Normal everyday dirt, dust, crumbs,
+                                light exterior buildup, and regular
+                                vehicle use.
+                            </p>
+
+                        </div>
+
+
+                        <div class="condition">
+
+                            <h4>Very Dirty</h4>
+
+                            <p>
+                                Heavier dirt, larger amounts of debris,
+                                stains, buildup, or a vehicle that needs
+                                more time and attention.
+                            </p>
+
+                        </div>
+
+
+                        <div class="condition">
+
+                            <h4>Extremely Dirty</h4>
+
+                            <p>
+                                Significant buildup, heavy debris,
+                                difficult stains, or vehicles requiring
+                                substantially more cleaning time.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROCESS
+        ========================================================== -->
+
+        <section class="section process" id="process">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        THE PROCESS
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        CLEANING YOUR CAR
+
+                        <br>
+
+                        <span style="color:#1687ff;">
+                            MADE SIMPLE.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        No complicated process. Tell us what you need,
+                        choose a time, and we'll bring the detail to you.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-card reveal">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <h3>Request</h3>
+
+                        <p>
+                            Fill out the booking form with your contact
+                            information and the service you want.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card reveal">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <h3>Confirm</h3>
+
+                        <p>
+                            We'll communicate with you to confirm the
+                            details and schedule.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card reveal">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <h3>We Arrive</h3>
+
+                        <p>
+                            We come directly to your home with what we
+                            need to get started.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card reveal">
+
+                        <div class="process-number">
+                            04
+                        </div>
+
+                        <h3>Fresh Finish</h3>
+
+                        <p>
+                            We detail your vehicle and leave it looking
+                            noticeably cleaner.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MOBILE
+        ========================================================== -->
+
+        <section class="section mobile-section">
+
+            <div class="blue-orb orb-two"></div>
+
+            <div class="container">
+
+                <div class="mobile-grid">
+
+
+                    <div class="mobile-image reveal">
+
+                        <div class="mobile-image-card">
+
+                            <strong>
+                                WE COME TO YOU.
+                            </strong>
+
+                            <span>
+                                Your driveway. Your schedule. Your car.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <div class="section-label">
+                            FULLY MOBILE
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            YOUR DRIVEWAY
+
+                            <br>
+
+                            <span style="color:#1687ff;">
+                                IS THE SHOP.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Forget dropping your car off somewhere and
+                            waiting around. Fresh Finish is designed to
+                            make detailing convenient.
+
+                        </p>
+
+
+                        <div class="mobile-list">
+
+
+                            <div class="mobile-item">
+
+                                <div class="mobile-item-icon">
+                                    A
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        At Your Home
+                                    </h4>
+
+                                    <p>
+                                        We come directly to your driveway.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mobile-item">
+
+                                <div class="mobile-item-icon">
+                                    B
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Water + Electricity
+                                    </h4>
+
+                                    <p>
+                                        All we need from you is access to
+                                        water and electricity.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mobile-item">
+
+                                <div class="mobile-item-icon">
+                                    C
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        No Shop Drop-Off
+                                    </h4>
+
+                                    <p>
+                                        Keep your day moving while your
+                                        vehicle gets detailed.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SHOWCASE
+        ========================================================== -->
+
+        <section class="section showcase">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        THE FINISH
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        A CLEAN CAR
+
+                        <br>
+
+                        <span style="color:#1687ff;">
+                            CHANGES EVERYTHING.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="showcase-grid">
+
+
+                    <div class="showcase-card reveal">
+
+                        <div class="showcase-content">
+
+                            <span>
+                                Fresh Finish
+                            </span>
+
+                            <h3>
+                                Clean. Sharp. Ready.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-card reveal">
+
+                        <div class="showcase-content">
+
+                            <span>
+                                Exterior
+                            </span>
+
+                            <h3>
+                                A cleaner first impression.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-card reveal">
+
+                        <div class="showcase-content">
+
+                            <span>
+                                Interior
+                            </span>
+
+                            <h3>
+                                Fresh from the inside out.
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+        ========================================================== -->
+
+        <section class="section about" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+
+                    <div class="reveal">
+
+                        <div class="section-label">
+                            ABOUT FRESH FINISH
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            BUILT BY
+
+                            <br>
+
+                            <span style="color:#1687ff;">
+                                TWO HIGH SCHOOLERS.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Fresh Finish Detailing is a small,
+                            locally-based mobile detailing business
+                            built by two high schoolers in West Linn.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-box reveal">
+
+                        <ul class="about-list">
+
+
+                            <li>
+
+                                <span class="about-check">
+                                    ✓
+                                </span>
+
+                                <strong>
+                                    Based in West Linn, Oregon
+                                </strong>
+
+                            </li>
+
+
+                            <li>
+
+                                <span class="about-check">
+                                    ✓
+                                </span>
+
+                                <strong>
+                                    Two high schoolers
+                                </strong>
+
+                            </li>
+
+
+                            <li>
+
+                                <span class="about-check">
+                                    ✓
+                                </span>
+
+                                <strong>
+                                    Fully mobile — we come to you
+                                </strong>
+
+                            </li>
+
+
+                            <li>
+
+                                <span class="about-check">
+                                    ✓
+                                </span>
+
+                                <strong>
+                                    All we need is water and electricity
+                                </strong>
+
+                            </li>
+
+
+                        </ul>
+
+
+                        <p class="about-tagline">
+
+                            You provide the driveway.
+
+                            <br>
+
+                            We bring the detail.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FAQ
+        ========================================================== -->
+
+        <section class="section faq" id="faq">
+
+            <div class="container">
+
+                <div class="reveal" style="text-align:center;">
+
+                    <div class="section-label">
+                        QUESTIONS
+                    </div>
+
+
+                    <h2
+                        class="section-title"
+                        style="margin-left:auto;margin-right:auto;"
+                    >
+
+                        BEFORE YOU
+
+                        <br>
+
+                        <span style="color:#1687ff;">
+                            BOOK.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-wrapper">
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Where are you located?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Fresh Finish Detailing is based in
+                                West Linn, Oregon and operates as a
+                                mobile detailing service.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Do you come to my house?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. We're fully mobile and come to
+                                your home. All we need is access to
+                                water and electricity.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            How do I book?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Fill out the booking form below with
+                                your information, desired service,
+                                vehicle condition, and preferred date.
+                                We'll use the information to coordinate
+                                your detail.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Why does price depend on condition?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Heavily soiled vehicles can require
+                                significantly more time and work than
+                                vehicles with normal everyday dirt.
+                                That's why we have standard, very dirty,
+                                and extremely dirty pricing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            Do I need to provide anything?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                We ask that customers provide access
+                                to water and electricity at the
+                                location where the detail will take
+                                place.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+
+                            What vehicles do you detail?
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                We can discuss your specific vehicle
+                                when you book. Include any important
+                                details about the vehicle in the
+                                booking message.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BOOKING
+        ========================================================== -->
+
+        <section class="section booking" id="booking">
+
+            <div class="container">
+
+                <div class="booking-grid">
+
+
+                    <div class="booking-info reveal">
+
+                        <div class="section-label">
+                            BOOK YOUR DETAIL
+                        </div>
+
+
+                        <h2 class="section-title">
+
+                            READY FOR A
+
+                            <br>
+
+                            <span style="color:#1687ff;">
+                                FRESH FINISH?
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Tell us what you need and we'll get in
+                            touch about your detail.
+
+                        </p>
+
+
+                        <div class="booking-details">
+
+
+                            <div class="booking-detail">
+
+                                <div class="booking-detail-icon">
+                                    01
+                                </div>
+
+                                <span>
+                                    West Linn, Oregon
+                                </span>
+
+                            </div>
+
+
+                            <div class="booking-detail">
+
+                                <div class="booking-detail-icon">
+                                    02
+                                </div>
+
+                                <span>
+                                    Fully mobile service
+                                </span>
+
+                            </div>
+
+
+                            <div class="booking-detail">
+
+                                <div class="booking-detail-icon">
+                                    03
+                                </div>
+
+                                <span>
+                                    Water + electricity required
+                                </span>
+
+                            </div>
+
+
+                            <div class="booking-detail">
+
+                                <div class="booking-detail-icon">
+                                    04
+                                </div>
+
+                                <span>
+                                    (304) 972-4003
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form
+                        class="booking-form reveal"
+                        id="bookingForm"
+                    >
+
+                        <div class="form-header">
+
+                            <h3>
+                                Request a Detail
+                            </h3>
+
+                            <p>
+                                Fill this out and we'll get your request.
+                            </p>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone
+                                </label>
+
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    placeholder="Your phone number"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="service">
+                                    Service
+                                </label>
+
+                                <select id="service" required>
+
+                                    <option value="">
+                                        Select a service
+                                    </option>
+
+                                    <option>
+                                        Interior + Exterior
+                                    </option>
+
+                                    <option>
+                                        Interior Only
+                                    </option>
+
+                                    <option>
+                                        Exterior Only
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="condition">
+                                    Vehicle Condition
+                                </label>
+
+                                <select id="condition" required>
+
+                                    <option value="">
+                                        Select condition
+                                    </option>
+
+                                    <option>
+                                        Standard
+                                    </option>
+
+                                    <option>
+                                        Very Dirty
+                                    </option>
+
+                                    <option>
+                                        Extremely Dirty
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="date">
+                                    Preferred Date
+                                </label>
+
+                                <input
+                                    id="date"
+                                    type="date"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="vehicle">
+                                    Vehicle
+                                </label>
+
+                                <input
+                                    id="vehicle"
+                                    type="text"
+                                    placeholder="Example: 2020 Honda Civic"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <label for="message">
+                                    Additional Details
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    placeholder="Tell us anything we should know about the vehicle..."
+                                ></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button
+                            class="form-submit"
+                            type="submit"
+                        >
+
+                            REQUEST MY DETAIL →
+
+                        </button>
+
+
+                        <div class="form-note">
+
+                            We'll use your information to respond
+                            about scheduling.
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT CTA
+        ========================================================== -->
+
+        <section class="contact">
+
+            <div class="container">
+
+                <div class="contact-inner reveal">
+
+
+                    <div>
+
+                        <h2>
+                            LET'S GET YOUR CAR FRESH.
+                        </h2>
+
+                        <p>
+                            Questions? Call or text Fresh Finish.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="tel:3049724003"
+                        class="phone-link"
+                    >
+                        (304) 972-4003
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+
+                        <div class="logo-mark">
+
+                            <span>FF</span>
+
+                        </div>
+
+                        <span>FRESH FINISH</span>
+
+                    </a>
+
+
+                    <p>
+
+                        Mobile car detailing based in West Linn,
+                        Oregon. Built by two high schoolers who care
+                        about doing the job right.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Navigate
+                    </h4>
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#services">
+                        Services
+                    </a>
+
+                    <a href="#pricing">
+                        Pricing
+                    </a>
+
+                    <a href="#about">
+                        About
+                    </a>
+
+                    <a href="#booking">
+                        Book
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="tel:3049724003">
+                        (304) 972-4003
+                    </a>
+
+                    <a href="#booking">
+                        Request a Detail
+                    </a>
+
+                    <a href="#faq">
+                        FAQ
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Fresh Finish Detailing.
+                    All rights reserved.
+                </span>
+
+                <span>
+                    West Linn, Oregon
+                </span>
+
+            </div>
+
+
         </div>
 
-        <ul>
+    </footer>
 
-          <li>
-            Standard condition — $35
-          </li>
 
-          <li>
-            Very dirty — $40
-          </li>
 
-          <li>
-            Extremely dirty — $45
-          </li>
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
 
-          <li>
-            Exterior wash
-          </li>
+    <button
+        class="back-top"
+        id="backTop"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
 
-          <li>
-            Wheels cleaned
-          </li>
 
-          <li>
-            Final finish
-          </li>
 
-        </ul>
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-      </div>
+    <script>
 
 
-    </div>
+        /* =====================================================
+           SCROLL REVEAL
+        ====================================================== */
 
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
-    <p class="note">
 
-      Prices are starting prices.
+        const revealObserver =
+            new IntersectionObserver(
 
-      Final pricing may vary depending on the
-      vehicle's condition and the amount of cleaning
-      required.
+                (entries) => {
 
-    </p>
+                    entries.forEach(
 
-  </section>
+                        (entry) => {
 
+                            if (entry.isIntersecting) {
 
-  <!-- BOOKING -->
+                                entry.target.classList.add("show");
 
-  <section id="booking" class="booking">
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
 
-    <h2 class="section-title">
-      Book Your <span>Detail</span>
-    </h2>
+                            }
 
+                        }
 
-    <form onsubmit="sendBooking(event)">
+                    );
 
+                },
 
-      <label for="name">
-        Your Name
-      </label>
+                {
+                    threshold: 0.12
+                }
 
-      <input
-        type="text"
-        id="name"
-        placeholder="Your name"
-        required
-      >
+            );
 
 
-      <label for="phone">
-        Your Phone Number
-      </label>
+        revealElements.forEach(
 
-      <input
-        type="tel"
-        id="phone"
-        placeholder="Your phone number"
-        required
-      >
+            (element) => {
 
+                revealObserver.observe(element);
 
-      <label for="service">
-        Service
-      </label>
+            }
 
-      <select id="service" required>
+        );
 
-        <option value="">
-          Choose a service
-        </option>
 
-        <option>
-          Interior + Exterior — Starting at $100
-        </option>
 
-        <option>
-          Interior Only — Starting at $65
-        </option>
+        /* =====================================================
+           FAQ ACCORDION
+        ====================================================== */
 
-        <option>
-          Exterior Only — Starting at $35
-        </option>
+        const faqItems =
+            document.querySelectorAll(".faq-item");
 
-      </select>
 
+        faqItems.forEach(
 
-      <label for="condition">
-        Vehicle Condition
-      </label>
+            (item) => {
 
-      <select id="condition" required>
+                const question =
+                    item.querySelector(".faq-question");
 
-        <option value="">
-          How dirty is the vehicle?
-        </option>
 
-        <option>
-          Normal
-        </option>
+                question.addEventListener(
 
-        <option>
-          Very dirty
-        </option>
+                    "click",
 
-        <option>
-          Extremely dirty
-        </option>
+                    () => {
 
-      </select>
+                        faqItems.forEach(
 
+                            (otherItem) => {
 
-      <label for="date">
-        Preferred Date
-      </label>
+                                if (otherItem !== item) {
 
-      <input
-        type="date"
-        id="date"
-        required
-      >
+                                    otherItem.classList.remove(
+                                        "active"
+                                    );
 
+                                }
 
-      <label for="message">
-        Anything Else?
-      </label>
+                            }
 
-      <textarea
-        id="message"
-        placeholder="Tell us anything we should know about the vehicle..."
-      ></textarea>
+                        );
 
 
-      <button type="submit">
-        Send Booking Request
-      </button>
+                        item.classList.toggle("active");
 
+                    }
 
-    </form>
+                );
 
-  </section>
+            }
 
+        );
 
-  <!-- CONTACT -->
 
-  <section id="contact" class="contact">
 
-    <h2 class="section-title">
-      Contact <span>Fresh Finish</span>
-    </h2>
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
 
-    <p>
-      Ready to get your vehicle looking fresh?
-    </p>
+        const backTop =
+            document.getElementById("backTop");
 
 
-    <div class="phone">
-      (304) 972-4003
-    </div>
+        window.addEventListener(
 
+            "scroll",
 
-    <div class="service-area">
+            () => {
 
-      Based in West Linn, Oregon
+                if (window.scrollY > 500) {
 
-      <br>
+                    backTop.classList.add("visible");
 
-      Mobile detailing — I come to your house.
+                } else {
 
-    </div>
+                    backTop.classList.remove("visible");
 
+                }
 
-    <div class="buttons">
+            }
 
-      <a
-        class="btn primary"
-        href="tel:3049724003"
-      >
-        Call (304) 972-4003
-      </a>
+        );
 
-      <a
-        class="btn secondary"
-        href="sms:3049724003"
-      >
-        Text Us
-      </a>
 
-    </div>
+        backTop.addEventListener(
 
-  </section>
+            "click",
 
+            () => {
 
-  <!-- FOOTER -->
+                window.scrollTo({
 
-  <footer>
+                    top: 0,
 
-    © 2026 Fresh Finish Detailing.
-    All Rights Reserved.
+                    behavior: "smooth"
 
-  </footer>
+                });
 
+            }
 
-  <!-- BOOKING SCRIPT -->
+        );
 
-  <script>
 
-    function sendBooking(event) {
 
-      event.preventDefault();
+        /* =====================================================
+           NAVBAR SCROLL EFFECT
+        ====================================================== */
 
+        const navbar =
+            document.querySelector(".navbar");
 
-      const name =
-        document.getElementById("name").value;
 
-      const phone =
-        document.getElementById("phone").value;
+        window.addEventListener(
 
-      const service =
-        document.getElementById("service").value;
+            "scroll",
 
-      const condition =
-        document.getElementById("condition").value;
+            () => {
 
-      const date =
-        document.getElementById("date").value;
+                if (window.scrollY > 30) {
 
-      const message =
-        document.getElementById("message").value;
+                    navbar.style.background =
+                        "rgba(3,5,7,0.92)";
 
+                } else {
 
-      const text =
-        "Fresh Finish Detailing Booking Request:\n\n" +
+                    navbar.style.background =
+                        "rgba(3,5,7,0.7)";
 
-        "Name: " +
-        name +
-        "\n" +
+                }
 
-        "Customer Phone: " +
-        phone +
-        "\n" +
+            }
 
-        "Service: " +
-        service +
-        "\n" +
+        );
 
-        "Vehicle Condition: " +
-        condition +
-        "\n" +
 
-        "Preferred Date: " +
-        date +
-        "\n" +
 
-        "Notes: " +
-        message;
+        /* =====================================================
+           BOOKING FORM
+        ====================================================== */
 
+        const bookingForm =
+            document.getElementById("bookingForm");
 
-      window.location.href =
-        "sms:3049724003?body=" +
-        encodeURIComponent(text);
 
-    }
+        bookingForm.addEventListener(
 
-  </script>
+            "submit",
+
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById("name").value;
+
+
+                const phone =
+                    document.getElementById("phone").value;
+
+
+                const service =
+                    document.getElementById("service").value;
+
+
+                const condition =
+                    document.getElementById("condition").value;
+
+
+                const date =
+                    document.getElementById("date").value;
+
+
+                const vehicle =
+                    document.getElementById("vehicle").value;
+
+
+                const message =
+                    document.getElementById("message").value;
+
+
+                const text =
+
+                    "Fresh Finish Detail Request\n\n" +
+
+                    "Name: " +
+                    name +
+
+                    "\nPhone: " +
+                    phone +
+
+                    "\nService: " +
+                    service +
+
+                    "\nCondition: " +
+                    condition +
+
+                    "\nPreferred Date: " +
+                    date +
+
+                    "\nVehicle: " +
+                    vehicle +
+
+                    "\nAdditional Details: " +
+                    message;
+
+
+                const smsURL =
+                    "sms:3049724003?body=" +
+                    encodeURIComponent(text);
+
+
+                window.location.href = smsURL;
+
+            }
+
+        );
+
+
+
+        /* =====================================================
+           SET MINIMUM BOOKING DATE
+        ====================================================== */
+
+        const dateInput =
+            document.getElementById("date");
+
+
+        const today =
+            new Date();
+
+
+        const year =
+            today.getFullYear();
+
+
+        const month =
+            String(
+                today.getMonth() + 1
+            ).padStart(2, "0");
+
+
+        const day =
+            String(
+                today.getDate()
+            ).padStart(2, "0");
+
+
+        dateInput.min =
+            `${year}-${month}-${day}`;
+
+
+
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ====================================================== */
+
+        const sections =
+            document.querySelectorAll(
+                "section[id]"
+            );
+
+
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        window.addEventListener(
+
+            "scroll",
+
+            () => {
+
+                let current = "";
+
+
+                sections.forEach(
+
+                    (section) => {
+
+                        const sectionTop =
+                            section.offsetTop - 150;
+
+
+                        if (
+                            window.scrollY >=
+                            sectionTop
+                        ) {
+
+                            current =
+                                section.getAttribute(
+                                    "id"
+                                );
+
+                        }
+
+                    }
+
+                );
+
+
+                navLinks.forEach(
+
+                    (link) => {
+
+                        link.style.color =
+                            "#aeb9c8";
+
+
+                        if (
+                            link.getAttribute("href") ===
+                            "#" + current
+                        ) {
+
+                            link.style.color =
+                                "#ffffff";
+
+                        }
+
+                    }
+
+                );
+
+            }
+
+        );
+
+
+    </script>
 
 
 </body>
+
 </html>
