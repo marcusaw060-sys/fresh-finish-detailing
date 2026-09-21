@@ -12,9 +12,13 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #080b10;
+      background: #05080d;
       color: white;
       line-height: 1.6;
     }
@@ -23,8 +27,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: #05070a;
-      border-bottom: 1px solid #1e293b;
+      background: rgba(3, 7, 12, 0.95);
+      border-bottom: 1px solid #263449;
       padding: 16px 8%;
       display: flex;
       justify-content: space-between;
@@ -48,19 +52,34 @@
       color: #2196f3;
     }
 
+    /* HERO */
+
     .hero {
-      min-height: 80vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #080b10, #0d1725);
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
     }
 
     .hero h1 {
       font-size: clamp(42px, 7vw, 76px);
       margin-bottom: 20px;
+      line-height: 1.05;
     }
 
     .hero h1 span {
@@ -69,7 +88,7 @@
 
     .hero p {
       font-size: 20px;
-      color: #cbd5e1;
+      color: #e2e8f0;
       max-width: 700px;
       margin: auto;
     }
@@ -100,6 +119,7 @@
     .secondary {
       border: 2px solid #2196f3;
       color: white;
+      background: rgba(0,0,0,0.35);
     }
 
     .secondary:hover {
@@ -107,7 +127,7 @@
     }
 
     section {
-      padding: 70px 8%;
+      padding: 75px 8%;
     }
 
     .section-title {
@@ -120,6 +140,15 @@
       color: #2196f3;
     }
 
+    /* PRICING */
+
+    #pricing {
+      background:
+        linear-gradient(rgba(5,8,13,0.91), rgba(5,8,13,0.96)),
+        url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=2000&q=85")
+        center/cover fixed;
+    }
+
     .pricing {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -129,11 +158,17 @@
     }
 
     .card {
-      background: #111827;
+      background: rgba(17,24,39,0.92);
       border: 1px solid #263449;
       border-radius: 14px;
       padding: 30px;
       text-align: center;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #2196f3;
     }
 
     .card h3 {
@@ -166,14 +201,19 @@
       color: #94a3b8;
     }
 
+    /* BOOKING */
+
     .booking {
-      background: #0d1420;
+      background:
+        linear-gradient(rgba(8,11,16,0.93), rgba(8,11,16,0.96)),
+        url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=85")
+        center/cover fixed;
     }
 
     form {
       max-width: 650px;
       margin: auto;
-      background: #111827;
+      background: rgba(17,24,39,0.95);
       padding: 30px;
       border-radius: 14px;
       border: 1px solid #263449;
@@ -220,8 +260,14 @@
       background: #1976d2;
     }
 
+    /* CONTACT */
+
     .contact {
       text-align: center;
+      background:
+        linear-gradient(rgba(5,8,13,0.9), rgba(5,8,13,0.94)),
+        url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
     }
 
     .phone {
@@ -234,7 +280,7 @@
     footer {
       text-align: center;
       padding: 30px;
-      background: #05070a;
+      background: #030509;
       color: #64748b;
     }
 
@@ -251,6 +297,10 @@
       section {
         padding: 55px 5%;
       }
+
+      .hero {
+        min-height: 80vh;
+      }
     }
   </style>
 </head>
@@ -259,6 +309,7 @@
 
   <nav>
     <div class="logo">FRESH FINISH</div>
+
     <div>
       <a href="#pricing">Pricing</a>
       <a href="#booking">Book</a>
@@ -266,12 +317,20 @@
     </div>
   </nav>
 
+
+  <!-- HERO -->
+
   <section class="hero">
-    <div>
-      <h1>Professional Car Detailing <span>At an Affordable Price.</span></h1>
+    <div class="hero-content">
+
+      <h1>
+        Professional Car Detailing
+        <span>At an Affordable Price.</span>
+      </h1>
+
       <p>
-        Fresh Finish Detailing helps keep your vehicle looking clean,
-        fresh, and ready for the road.
+        Fresh Finish Detailing helps keep your vehicle looking
+        clean, fresh, and ready for the road.
       </p>
 
       <div class="buttons">
@@ -279,16 +338,25 @@
         <a class="btn secondary" href="tel:3049724003">Call Now</a>
         <a class="btn secondary" href="sms:3049724003">Text Me</a>
       </div>
+
     </div>
   </section>
 
+
+  <!-- PRICING -->
+
   <section id="pricing">
-    <h2 class="section-title">Our <span>Pricing</span></h2>
+
+    <h2 class="section-title">
+      Our <span>Pricing</span>
+    </h2>
 
     <div class="pricing">
 
       <div class="card">
+
         <h3>Interior + Exterior</h3>
+
         <div class="price">$100+</div>
 
         <ul>
@@ -299,10 +367,14 @@
           <li>Exterior wash</li>
           <li>Final finish</li>
         </ul>
+
       </div>
 
+
       <div class="card">
+
         <h3>Interior Only</h3>
+
         <div class="price">$65+</div>
 
         <ul>
@@ -313,10 +385,14 @@
           <li>Surface cleaning</li>
           <li>Interior finish</li>
         </ul>
+
       </div>
 
+
       <div class="card">
+
         <h3>Exterior Only</h3>
+
         <div class="price">$35+</div>
 
         <ul>
@@ -327,93 +403,193 @@
           <li>Wheels cleaned</li>
           <li>Final finish</li>
         </ul>
+
       </div>
 
     </div>
 
+
     <p class="note">
-      Prices are starting prices. Final pricing may vary depending on the
-      vehicle's condition and the amount of cleaning required.
+      Prices are starting prices. Final pricing may vary depending
+      on the vehicle's condition and the amount of cleaning required.
     </p>
+
   </section>
 
+
+  <!-- BOOKING -->
+
   <section id="booking" class="booking">
-    <h2 class="section-title">Book Your <span>Detail</span></h2>
+
+    <h2 class="section-title">
+      Book Your <span>Detail</span>
+    </h2>
 
     <form onsubmit="sendBooking(event)">
 
       <label for="name">Your Name</label>
       <input type="text" id="name" required>
 
+
       <label for="phone">Your Phone Number</label>
       <input type="tel" id="phone" required>
 
+
       <label for="service">Service</label>
+
       <select id="service" required>
+
         <option value="">Choose a service</option>
-        <option>Interior + Exterior — Starting at $100</option>
-        <option>Interior Only — Starting at $65</option>
-        <option>Exterior Only — Starting at $35</option>
+
+        <option>
+          Interior + Exterior — Starting at $100
+        </option>
+
+        <option>
+          Interior Only — Starting at $65
+        </option>
+
+        <option>
+          Exterior Only — Starting at $35
+        </option>
+
       </select>
 
-      <label for="condition">Vehicle Condition</label>
+
+      <label for="condition">
+        Vehicle Condition
+      </label>
+
       <select id="condition" required>
-        <option value="">How dirty is the vehicle?</option>
-        <option>Normal</option>
-        <option>Very dirty</option>
-        <option>Extremely dirty</option>
+
+        <option value="">
+          How dirty is the vehicle?
+        </option>
+
+        <option>
+          Normal
+        </option>
+
+        <option>
+          Very dirty
+        </option>
+
+        <option>
+          Extremely dirty
+        </option>
+
       </select>
 
-      <label for="date">Preferred Date</label>
+
+      <label for="date">
+        Preferred Date
+      </label>
+
       <input type="date" id="date" required>
 
-      <label for="message">Anything Else?</label>
-      <textarea id="message" placeholder="Tell us anything we should know about the vehicle..."></textarea>
 
-      <button type="submit">Send Booking Request</button>
+      <label for="message">
+        Anything Else?
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="Tell us anything we should know about the vehicle..."
+      ></textarea>
+
+
+      <button type="submit">
+        Send Booking Request
+      </button>
 
     </form>
+
   </section>
+
+
+  <!-- CONTACT -->
 
   <section id="contact" class="contact">
-    <h2 class="section-title">Contact <span>Fresh Finish</span></h2>
 
-    <p>Ready to get your vehicle looking fresh?</p>
+    <h2 class="section-title">
+      Contact <span>Fresh Finish</span>
+    </h2>
 
-    <div class="phone">(304) 972-4003</div>
+    <p>
+      Ready to get your vehicle looking fresh?
+    </p>
+
+    <div class="phone">
+      (304) 972-4003
+    </div>
 
     <div class="buttons">
-      <a class="btn primary" href="tel:3049724003">Call (304) 972-4003</a>
-      <a class="btn secondary" href="sms:3049724003">Text Us</a>
+
+      <a
+        class="btn primary"
+        href="tel:3049724003"
+      >
+        Call (304) 972-4003
+      </a>
+
+      <a
+        class="btn secondary"
+        href="sms:3049724003"
+      >
+        Text Us
+      </a>
+
     </div>
+
   </section>
+
 
   <footer>
     © 2026 Fresh Finish Detailing. All Rights Reserved.
   </footer>
 
+
   <script>
+
     function sendBooking(event) {
+
       event.preventDefault();
 
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const service = document.getElementById("service").value;
-      const condition = document.getElementById("condition").value;
-      const date = document.getElementById("date").value;
-      const message = document.getElementById("message").value;
+      const name =
+        document.getElementById("name").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const service =
+        document.getElementById("service").value;
+
+      const condition =
+        document.getElementById("condition").value;
+
+      const date =
+        document.getElementById("date").value;
+
+      const message =
+        document.getElementById("message").value;
+
 
       const text =
-        "Fresh Finish Detailing Booking Request:%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Service: " + encodeURIComponent(service) + "%0A" +
-        "Vehicle Condition: " + encodeURIComponent(condition) + "%0A" +
-        "Preferred Date: " + encodeURIComponent(date) + "%0A" +
-        "Notes: " + encodeURIComponent(message);
+        "Fresh Finish Detailing Booking Request:\n\n" +
+        "Name: " + name + "\n" +
+        "Customer Phone: " + phone + "\n" +
+        "Service: " + service + "\n" +
+        "Vehicle Condition: " + condition + "\n" +
+        "Preferred Date: " + date + "\n" +
+        "Notes: " + message;
 
-      window.location.href = "sms:3049724003?body=" + text;
+
+      window.location.href =
+        "sms:3049724003?body=" +
+        encodeURIComponent(text);
+
     }
+
   </script>
 
 </body>
