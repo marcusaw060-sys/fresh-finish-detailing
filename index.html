@@ -655,6 +655,14 @@
         }
 
 
+        /*
+           ONLY CHANGE FOR THE OVERLAP:
+
+           The hero content gets extra room underneath it.
+           This moves the buttons and text slightly upward
+           so the three stats at the bottom have their own space.
+        */
+
         .hero-content {
 
             position: relative;
@@ -662,6 +670,8 @@
             z-index: 3;
 
             padding-top: 90px;
+
+            padding-bottom: 175px;
 
             max-width: 780px;
 
@@ -3098,7 +3108,7 @@
 
 
         /* =====================================================
-           MOBILE
+           TABLET
         ====================================================== */
 
         @media (max-width: 1000px) {
@@ -3187,6 +3197,10 @@
         }
 
 
+        /* =====================================================
+           PHONE
+        ====================================================== */
+
         @media (max-width: 700px) {
 
             .container {
@@ -3212,9 +3226,17 @@
             }
 
 
+            /*
+               SAME FIX ON PHONE:
+               extra bottom space keeps the three stats away
+               from the buttons.
+            */
+
             .hero-content {
 
                 padding-top: 80px;
+
+                padding-bottom: 190px;
 
             }
 
@@ -4017,8 +4039,6 @@
                 <div class="pricing-grid">
 
 
-                    <!-- FULL DETAIL -->
-
                     <div class="price-card featured reveal">
 
                         <div class="popular">
@@ -4077,8 +4097,6 @@
 
 
 
-                    <!-- INTERIOR -->
-
                     <div class="price-card reveal">
 
                         <h3>Interior Only</h3>
@@ -4131,8 +4149,6 @@
                     </div>
 
 
-
-                    <!-- EXTERIOR -->
 
                     <div class="price-card reveal">
 
@@ -4362,7 +4378,7 @@
 
 
         <!-- =====================================================
-             MOBILE
+             MOBILE DETAILING
         ========================================================== -->
 
         <section class="section mobile-section">
@@ -5214,7 +5230,7 @@
 
 
         <!-- =====================================================
-             CONTACT CTA
+             CONTACT
         ========================================================== -->
 
         <section class="contact">
@@ -5659,7 +5675,7 @@
 
 
         /* =====================================================
-           SET MINIMUM BOOKING DATE
+           MINIMUM BOOKING DATE
         ====================================================== */
 
         const dateInput =
